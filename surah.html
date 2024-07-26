@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- Meta charset untuk encoding karakter -->
+      <meta charset="UTF-8">
+      <!-- Meta viewport untuk penyesuaian tampilan di perangkat mobile -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Judul halaman -->
+      <title>MOSQUE AL-QUR'AN</title>
+      <!-- Link ke stylesheet CSS -->
+      <link rel="stylesheet" href="surah.css">
+      <!-- Link ke Google Fonts untuk penggunaan font Playfair Display -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+</head>
+<body>
+      <!-- Bagian header dengan navigasi -->
+      <header>
+            <nav>
+                  <ul>
+                        <!-- Menu navigasi dengan link ke berbagai halaman -->
+                        <li class="nav-1"><a href="index.html"><img src="./assets/Mosque (1).png" alt="gambar"></a></li>
+                        <li class="nav-2"><a href="index.html">HOME</a></li>
+                        <li class="nav-2"><a href="surah.html">SURAH</a></li>
+                        <li class="nav-2"><a href="doa.html">DOA</a></li>
+                        <li class="nav-2"><a href="about.html">ABOUT</a></li>
+                        <li class="nav-2"><a href="login.html">LOGIN</a></li>
+                  </ul>
+            </nav>
+      </header>
+
+      <!-- Bagian utama konten -->
+      <main>
+            <!-- Video latar belakang -->
+            <video id="background-video" autoplay muted loop>
+                  <source src="./4K UHD Flying Above Clouds Live Wallpaper.mp4" type="video/mp4">
+            </video>
+            <!-- Caption di atas video -->
+            <div class="caption">
+                  <h1>MOSQUE AL-QUR'AN</h1>
+                  <br>
+                  <h3>"Bacalah Al-Quran karena ia akan datang sebagai pemberi syafaat bagi para 
+                        penghafalnya pada hari kiamat." (H.R. Muslim)</h3>
+                  <br>
+                  <!-- Tombol untuk kembali ke halaman surah.html -->
+                  <a href="surah.html" class="btn">back</a>
+            </div>
+      </main>
+
+      <!-- Seksi untuk video rekomendasi -->
+      <div class="animate">
+            <h2>Recommendation videos Al-Quran for you</h2>
+            <section class="vid">
+                  <div class="vid-con">
+                        <!-- Daftar video rekomendasi -->
+                        <div class="scVideo">
+                              <div class="scCardVid">
+                                    <h3>AL-kahf</h3>
+                                    <iframe src="https://www.youtube.com/embed/Um8O5JPWawg" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <div class="scCardVid">
+                                    <h3>Perbaiki sholatmu</h3>
+                                    <iframe src="https://www.youtube.com/embed/QjGV40MQKu4" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <div class="scCardVid">
+                                    <h3>Kisah Inspirasi</h3>
+                                    <iframe src="https://www.youtube.com/embed/ZzdPHmAXZ6Q" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <div class="scCardVid">
+                                    <h3> Perbaiki Sholatmu</h3>
+                                    <iframe src="https://www.youtube.com/embed/QjGV40MQKu4" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <div class="scCardVid">
+                                    <h3>Renungan I'tiraf</h3>
+                                    <iframe src="https://www.youtube.com/embed/KDPqlTDdMmM" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <div class="scCardVid">
+                                    <h3>Perbaiki Solatmu</h3>
+                                    <iframe src="https://www.youtube.com/embed/QjGV40MQKu4" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <div class="scCardVid">
+                                    <h3>AL-kahf</h3>
+                                    <iframe src="https://www.youtube.com/embed/Um8O5JPWawg" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                              <div class="scCardVid">
+                                    <h3>Renungan I'tiraf</h3>
+                                    <iframe src="https://www.youtube.com/embed/KDPqlTDdMmM" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                        </div>
+                        <!-- Tombol navigasi video -->
+                        <div class="arrow-left">&lt;</div>
+                        <div class="arrow-right">&gt;</div>
+                  </div>
+            </section>
+      </div>
+
+      <!-- Container untuk memilih surah dan menampilkan variannya -->
+      <div class="container">
+            <!-- Dropdown untuk memilih surah -->
+            <select id="quran">
+                  <option value="">Pilih Surah</option>
+            </select>
+            <!-- Tempat untuk menampilkan urutan surah -->
+            <div class="urutanSurah"></div>
+            <!-- Tempat untuk menampilkan varian surah -->
+            <div class="varian"></div>
+      </div>
+
+      <!-- Bagian footer -->
+      <footer>
+            <div class="ar">
+                  <!-- Bagian About -->
+                  <div class="cl" id="label1">
+                        <img src="./assets/Mosque (1).png" class="logo">
+                        <h3>About</h3>
+                        <h5>MOSQUE Al-Quran merupakan media atau platform yang dibuat untuk mempermudah
+                              kaum muslimin untuk membaca al-quran dimana saja dan kapan saja. Raihlah kesuksen dunia
+                              maupun akhirat bersama-sama. Thank you partisipasinya!</h5>
+                  </div>
+                  <!-- Bagian Contact Us -->
+                  <div class="cl" id="label2">
+                        <h3>Contact us <div class="ka"></div></h3>
+                        <p class="bio"><img src="./assets/email.jpg" alt=""><t><t>thaskia67@gmail.com</t></t></p>
+                        <p class="bio"><img src="./assets/wa.png" alt="">+62 8196 6494</p>
+                        <p class="bio"><img src="./assets/map.jpg" alt="">Jl.Diponegoro,8a.</p>
+                  </div>
+                  <!-- Bagian Fiture -->
+                  <div class="cl">
+                        <h3>Fiture <div class="ka"><span></span></div></h3>
+                        <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="surah.html">Surah</a></li>
+                              <li><a href="doa.html">Doa</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="login.html">Login</a></li>
+                        </ul>
+                  </div>
+                  <!-- Bagian Social Media -->
+                  <ul class="sosmed">
+                        <li><a href="https://www.instagram.com/?h1=en"><img src="./assets/instagram.jpg" alt=""></a><p>Mosque Al-Qur'an</p></li>
+                        <li><a href="https://www.lineapp.com/?h1=en"><img src="./assets/line.png" alt=""></a><p>MosqueDigital07</p></li>
+                        <li><a href="https://twitter.com/i/flow/login"><img src="./assets/twitter.jpg" alt=""></a><p>@MosqueAl-Qur'an</p></li>
+                  </ul>
+            </div>
+           <hr>
+            <!-- Copyright notice -->
+            <p class="copy">&copy;Thaskia Meuthia Ramadhini</p>
+      </footer>
+      <!-- Link ke file JavaScript -->
+      <script src="surah.js"></script>
+</body>
+</html>

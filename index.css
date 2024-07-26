@@ -1,0 +1,1342 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&display=swap');
+
+
+/* menyembunyikan scrollbar ajika teks panjang tp ttp bisa di digulir */
+::-webkit-scrollbar{
+      display: none;
+    }
+    
+
+/* Mengatur ukuran dan gaya untuk elemen <body> */
+body{
+      margin: 0;  /* Menghilangkan margin default */
+      padding: 0; /* Menghilangkan padding default */
+      box-sizing: border-box;  /* Memastikan padding dan border termasuk dalam ukuran elemen */
+}
+
+/* Mengatur ukuran dan gaya untuk elemen <header> dan <nav> */
+header,nav{
+      margin: 0;
+      padding-bottom: 0;  /* Menghilangkan padding bawah */
+      padding: 0;
+      width: 100%;
+      height: 75px;
+      background: linear-gradient(to right, #ddb177, #d85dcc);
+
+
+        /* Mengatur gaya untuk <ul> di dalam <header> dan <nav> */
+      >ul {
+
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex; /* Menggunakan Flexbox untuk tata letak anak elemen */
+            list-style: none; /* Menghilangkan tanda titik pada daftar */
+            justify-content: space-between; /* Membagi ruang secara merata antara anak elemen */
+            align-items: center;
+
+             /* Mengatur gaya untuk <a> di dalam <li> */
+            >li a{
+                  text-decoration: none; /* Menghilangkan garis bawah pada teks tautan */
+                  color: azure;
+                  font-size: 10px;
+                  font-family: sans-serif;
+                  font-weight: bold;
+            }
+           
+      }
+      
+}
+
+
+/* Mengatur gaya untuk elemen dengan kelas .nav-1 dan .nav-2 */
+.nav-1,
+.nav-2{
+      padding: 1;/* Padding 1 unit */
+      flex: 1; /* Flex-grow 1 untuk mengambil ruang yang tersisa */
+      text-align: center;
+      align-items: center;
+}
+
+
+/* Gaya khusus untuk elemen dengan kelas .nav-1 */
+.nav-1{
+      padding-top: 15px; /* Padding atas 15px */
+      flex: 6;  /* Flex-grow 6 untuk mengambil lebih banyak ruang */
+      text-align: left;
+      margin-left: 40px; /* Margin kiri 40px */
+}
+
+
+/* Menambahkan gaya untuk gambar di dalam .nav-1 */
+.nav-1 a{
+      > img{
+            margin-top: -10px; /* Margin atas negatif untuk menaikkan gambar */
+            width: 60px;
+      }
+}
+
+/* Efek hover pada tautan di dalam <nav> */
+ header nav ul li a:hover{
+      color: rgb(111, 73, 7);
+      text-shadow: 5px 5px 5px rgb(212, 215, 132); /* Tambahkan bayangan teks */
+      transition: 1s; /* Transisi selama 1 detik */
+      border-bottom: 5px solid white; /* Tambahkan garis bawah putih */
+
+
+} 
+
+
+/* gaya untuk elemen main video */
+main{
+       width: 100%;    /* Lebar penuh dari elemen induk */
+      height: 80vh;     /* Tinggi 80% dari tinggi layar*/
+      position: relative; /* Mengatur posisi relatif untuk elemen anak */
+      display: flex;    /* Menggunakan Flexbox untuk tata letak di dalamnya */
+      align-items: center;  /* Menempatkan konten di tengah secara vertikal */
+      justify-content: center; /* Menempatkan konten di tengah secara horizontal */
+}
+
+
+/* Menambahkan efek overlay pada elemen <main> */
+main::after{
+      content: '';  /* Membuat elemen kosong */
+      width: 100%; /* Lebar penuh dari elemen ini */
+      height: 80vh;   /* Tinggi yang sama dengan elemen <main> */
+      background: rgb(20, 19, 19);  /* Warna latar belakang hitam pekat */
+      opacity: 0.5;  /* Transparan 50% */
+      position: absolute; /* Posisi absolut di dalam <main> */
+      top: 0; /* Letakkan di bagian atas */
+}
+
+
+/* Mengatur gaya untuk video latar belakang dengan ID #background-video */
+#background-video{
+      width: 100%;
+      height: 80vh;
+      position: absolute;
+      object-fit: cover;  /* Video menutupi seluruh area dengan proporsi yang benar */
+}
+
+
+/* Mengatur gaya untuk teks dan tombol di dalam elemen video dengan kelas .caption */
+.caption{
+      position: relative;  /* Posisinya relatif agar di atas video */
+      z-index: 90;  /* Menempatkan elemen ini di atas yang lain */
+      color: azure;
+      text-align: center;
+      font-family: 'playwrite cuba' sans-serif;
+     
+
+        /* Mengatur gaya untuk elemen <h1> di dalam .caption */
+      > h1{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3.9rem;
+            letter-spacing: 3px;  /* Jarak antar huruf */
+            -webkit-text-stroke: 2px rgba(208, 172, 41, 0.8);  /* Efek garis pada teks */
+
+      }
+
+      /* Mengatur gaya untuk tombol dengan kelas .btn di dalam .caption */
+      >.btn {
+            padding: 0.8rem 1.5rem; /* Ruang di dalam tombol */
+            background:#EFB495;
+            color: beige;
+            cursor: pointer; /* Mengubah kursor saat dihover */
+            border-radius: 16px;   /* Membuat sudut tombol melengkung */
+            padding: 1rem; 
+            font-size: 15px;
+            transition: 0.3s;  /* Efek transisi selama 0.3 detik */
+            font-family: 'Lucida Sans',sans-serif;
+            text-decoration: none;  /* Menghilangkan garis bawah pada teks */
+            
+      }
+
+
+
+}
+
+/* Mengatur gaya untuk elemen dengan kelas .induk */
+.induk{
+      width: 100%;
+      min-height:20vh; /* Tinggi minimum 20% dari tinggi layar */
+      background: linear-gradient(45deg, #353534, #b97646);
+      color: #fff;
+      position: relative;  /* Posisi relatif untuk elemen anak */
+
+}
+
+
+/* Mengatur gaya untuk elemen dengan kelas .wadah */
+.wadah{
+      width: 800px;
+      height: 120px;
+      position: absolute; /* Posisi absolut untuk sentralisasi */
+      top: 50%; /* Posisikan di tengah secara vertikal */
+      left: 50%; /* Posisikan di tengah secara horizontal */
+      transform: translate(-25%, -50%); /* Pindahkan ke tengah sempurna */
+}
+
+/* Mengatur gaya untuk elemen dengan kelas .jam-digital */
+.jam-digital{
+      width: 50%;
+      height: 100%;
+      background: rgba(13, 1, 20, 0.068); /* Warna latar belakang semi-transparan */
+      border-radius: 10px;  /* Sudut membulat */
+      display: flex; /* Flexbox untuk tata letak */
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(39px); /* Efek blur pada latar belakang */
+}
+
+
+/* Mengatur pseudo-elemen ::after untuk .wadah */
+.wadah::after{
+      content: ''; /* Konten kosong */
+      width: 180px;
+      border-radius: 50%; /* Bentuk lingkaran */
+      position: absolute;
+      right: -30px; /* Posisikan 30px ke kiri dari sisi kanan */
+      bottom: -50px; /* Posisikan 50px ke atas dari sisi bawah */
+      z-index: -1;  /* Posisikan di belakang elemen lain */
+}
+
+
+/* Mengatur gaya untuk elemen <span> di dalam .jam-digital */
+.jam-digital span{
+      font-size: 40px;
+      width: 110px;
+      display: inline-block; /* Tampilkan sebagai blok sebaris */
+      text-align: center;
+      position: relative;
+
+}
+
+/* Mengatur pseudo-elemen ::after untuk <span> di dalam .jam-digital */
+.jam-digital span::after{
+      font-size: 10px;
+      position: absolute;
+      bottom: -5px; /* Posisikan 5px ke atas dari sisi bawah */
+      left: 50%; /* Posisikan di tengah secara horizontal */
+      transform: translateX(-20%); /* Pindahkan ke tengah sempurna */
+}
+
+/* Mengatur konten pseudo-elemen ::after untuk <span> dengan id #jam */
+#jam::after{
+      content: 'JAM'; /* Konten teks "JAM" */
+
+}
+
+
+/* Mengatur konten pseudo-elemen ::after untuk <span> dengan id #menit */
+#menit::after{
+      content: 'MENIT';
+
+}
+
+/* Mengatur konten pseudo-elemen ::after untuk <span> dengan id #detik */
+#detik::after{
+      content: 'DETIK';
+
+}
+
+
+
+/* Mengatur gaya untuk elemen dengan kelas .wrapper */
+.wrapper{
+      display: flex;  /* Flexbox untuk tata letak */
+      width: 100%;
+      justify-content: space-around; /* Rata secara merata dengan ruang di antara */
+      
+}
+
+/* Mengatur gaya untuk elemen dengan kelas .card */
+.card{
+      width:700px;
+      height:260px;
+      padding: 2rem 1rem; /* Padding atas-bawah 2rem, kiri-kanan 1rem */
+      position: relative;
+      display: flex;
+      align-items: flex-end;  /* Rata bawah secara vertikal */
+      box-shadow: 0px 7px 10px rgba(246, 241, 241, 0.5); /* Bayangan */
+      transition:  0.7s ease-in-out; /* Transisi animasi */
+}
+
+/* Mengatur efek hover untuk elemen dengan kelas .card */
+.card:hover{
+      transform: translateY(20px); /* Pindahkan ke atas sebesar 20px */
+}
+
+/* Mengatur pseudo-elemen ::before untuk .card */
+.card:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block; /* Tampilkan sebagai blok */
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(147, 224, 215, 0.5));
+      z-index: 2; /*Posisikan di atas elemen lain */
+      transition: 0.5s all; /* Transisi animasi */
+      opacity:0; /* Awalnya transparan */
+}
+
+/* Mengatur efek hover untuk pseudo-elemen ::before di .card */
+.card:hover::before{
+      opacity: 1; /* Jadikan sepenuhnya terlihat */
+
+}
+
+
+/* Mengatur gaya untuk elemen <img> di dalam .card */
+.card img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Skala gambar untuk menutupi area */
+      position: absolute;
+      top: 0;/* Posisikan di atas */
+      left: 0; /* Posisikan di kiri */
+}
+
+
+/* Mengatur gaya untuk elemen dengan kelas .info di dalam .card */
+.card .info{
+      position: relative; /* Posisi relatif */
+      z-index: 3; /* Posisikan di atas elemen lain */
+      color: #eae7e7;
+      opacity: 0; /* Awalnya transparan */
+      transform: translateY(30px); /* Pindahkan ke bawah sebesar 30px */
+      transition: 0.5s all;
+}
+
+/* Mengatur efek hover untuk elemen dengan kelas .info di dalam .card */
+.card:hover .info{
+      opacity: 1; /* Jadikan sepenuhnya terlihat */
+      transform: translateY(0px); /* Pindahkan ke posisi semula */
+}
+
+
+/* Mengatur gaya untuk paragraf di dalam .info */
+.card .info p{
+      letter-spacing: 1px;
+      font-size: 15px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+}
+
+/* Mengatur gaya untuk tombol di dalam .info */
+.card .info .btn{
+      text-decoration: none; /* Menghilangkan garis bawah */
+      padding: 0.5rem 1rem; /* Padding atas-bawah 0.5rem, kiri-kanan 1rem */
+      background: #C08261; 
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.4s ease-in-out;
+}
+
+/* Mengatur efek hover untuk tombol di dalam .info */
+.card .info .btn:hover{
+      box-shadow: 0px 7px 10px rgba(222, 211, 211, 0.5); /* Bayangan */
+}
+
+
+
+  
+  /* FOOTER */
+  
+  /* Mengatur gaya untuk elemen <footer> */
+footer{
+      width:100%;
+      background: #d7c7c1;
+      position: relative;
+      bottom: 0;
+      color: #040303;
+      padding: 5px 0 5px; /* Padding atas dan bawah */
+      font-size: 13px;
+      line-height: 22px;  /* Jarak antar baris */
+      height: auto;
+      font-family: 'Bona Nova sc';
+}
+
+/* Mengatur gaya untuk elemen dengan kelas .ar */
+.ar{
+      width: 100%;
+      margin: 5px;
+      display: flex;
+      flex-wrap: wrap; /* Membungkus baris */
+      align-items: flex-start; /* Rata atas secara vertikal */
+      justify-content: space-between; /* Ruang di antara item */
+      background: #F0997D;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas .cl */
+.cl{
+      flex-basis: 25%; /* Lebar dasar 25% */
+      padding: 15px;
+}
+
+
+/* Mengatur gaya untuk elemen dengan kelas .logo */
+.logo{
+      width: 100px;
+      margin-bottom: 10px;
+}
+
+/* Mengatur gaya untuk elemen <h3> di dalam .cl */
+.cl h3{
+      width: fit-content;  /* Lebar sesuai konten */
+      margin-bottom: 40px;
+      position: relative;
+      font-family: 'playwrite cuba';
+}
+
+/* Mengatur gaya untuk elemen <img> di dalam .cl */
+.cl img{
+      width: 23px;
+}
+
+/* Mengatur efek hover untuk elemen <img> di dalam .cl */
+.cl img:hover{
+      width: 26px;
+}
+
+/* Mengatur gaya untuk elemen dengan id #label1 di dalam .cl */
+#label1 img{
+      width: 100px;
+
+}
+
+/* Mengatur gaya untuk elemen <a> di dalam .cl */
+.cl a{
+      text-decoration: none;
+      color:rgb(3, 3, 3) ;
+}
+
+/* Mengatur gaya untuk elemen <li> di dalam .cl */
+.cl ul li{
+      text-decoration: none;
+      margin-bottom: 12px;
+      list-style: none;
+}
+
+
+/* Mengatur gaya untuk elemen dengan kelas .sosmed */
+.sosmed{
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      >li{
+            padding: 30px;
+            font-size: 10px;
+            >a{
+                  padding: 15px;
+                  align-items: center;
+                  >p{
+                        align-items: center;
+                        justify-content: center;
+                  }
+            }
+      }
+}
+
+
+/* Mengatur gaya untuk elemen <p> di dalam .cl */
+.cl p{
+      font-family: 'playwrite cuba' 'Trebuchet MS';
+      text-align: left; /* Rata kiri */
+      font-size: 15px;
+      line-height: 50px; /* Jarak antar baris */
+}
+
+
+/* Mengatur gaya untuk elemen <h5> di dalam #label1 */
+#label1 h5{
+      text-align: justify;
+      font-family: 'playwrite cuba' 'Trebuchet MS';
+      font-size: 15px;
+      font-weight: 200;
+
+}
+
+/* Mengatur gaya untuk elemen dengan kelas .ka */
+.ka{
+      width: 100%;
+      height: 25%;
+      background-color: linear-gradient( to right,#2cc73b,#c35920 );
+      border-radius: 3px;  /* Sudut membulat */
+      position: absolute;
+      top: 25px; /* Posisikan 25px dari atas */
+      left: 0;
+      overflow: hidden; /* Sembunyikan overflow */
+}
+
+
+/* Mengatur gaya untuk elemen <span> di dalam .ka */
+.ka span{
+      width: 20px;
+      height: 100%;
+      background:linear-gradient(to right,#33ce33,#155f53);
+
+      border-radius: 3px;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      animation: moving 4s linear infinite; /* Animasi bergerak */
+
+}
+
+
+/* Mengatur gaya untuk elemen dengan kelas .copy */
+.copy{
+      text-align: center;
+      padding-left: 30px; /* Padding kiri */
+}
+
+/* Mengatur gaya untuk elemen <hr> */
+      hr{
+      color: white;
+        border-color: #ccc;
+        z-index: 9999; /* Posisi di atas elemen lain */
+    }
+    /* Mengatur gaya untuk elemen dengan kelas .sosmed */
+    .sosmed {
+      /* position: absolute; */
+      z-index: 10;  /* Posisi di atas elemen lain */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px;
+    }
+    
+    /* Mengatur gaya untuk elemen <li> di dalam .sosmed */
+    .sosmed li {
+      list-style: none; /* Menghilangkan tanda list */
+    }
+    /* Mengatur gaya untuk elemen <h5> */
+    h5{
+      text-align: center;
+      font-size: 20px;
+    }
+
+    /* Mengatur gaya untuk elemen <a> di dalam .sosmed li */
+    .sosmed li a {
+      text-align: center;
+      display: inline-block;
+      margin-right: 20px; /* Margin kanan */
+      filter: invert(1); /* Inversi warna */
+      transform: scale(0.5);  /* Skala lebih kecil */
+      transition: 0.5s; /* Transisi animasi */
+    }
+    
+
+      /* Mengatur gaya untuk elemen <img> di dalam .sosmed li a */
+    .sosmed li a img{
+      text-align: center;
+      width: 50px;
+      height: 50px;
+    }
+    
+    /* Mengatur efek hover untuk elemen <a> di dalam .sosmed li */
+    .sosmed li a:hover {
+      transform: scale(1.1);
+      transition: 1s;
+    }
+    
+
+
+        /* responsive */
+        /* Mengatur gaya untuk tampilan layar kecil (antara 280px hingga 320px) */
+        @media screen and (max-width:320px) and (min-width:280px) {
+
+              /* Mengatur gaya untuk header dan nav */
+            header,nav{
+            width: 100%;
+            height: 45px;
+            >ul {
+                 
+                  height: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 0px;
+      
+                  >li a{
+                        padding: 0px;
+                        font-size: 8px;
+                        
+                  }
+                 
+            }
+            
+      }
+      
+
+    /* Mengatur gaya untuk elemen .nav-1 dan .nav-2 */
+      .nav-1,
+      .nav-2{
+           
+            text-align: center;
+            align-items: center;
+      }
+      
+      /* Mengatur gaya khusus untuk .nav-1 */
+      .nav-1{
+            padding-top: 15px;  /* Padding atas */
+            flex: 6; /* Lebar fleksibel */
+            text-align: left;
+            margin-left: 40px; /* Margin kiri */
+      }
+      
+      /* Mengatur gaya untuk gambar dalam .nav-1 */
+      .nav-1 a{
+            > img{
+                  margin-left: 0; /* Menghapus margin kiri */
+                  margin-top: -10px;  /* Margin atas negatif */
+                  width: 30px;
+            }
+      }
+
+      /* Mengatur gaya untuk elemen main */
+      main{
+            width: 100%;
+            height: 80vh; /* Tinggi relatif terhadap viewport */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      }
+      
+         /* Mengatur gaya untuk elemen caption */
+      .caption{
+            position: relative;
+            z-index: 90; /* Posisi di atas elemen lain */
+            color: azure;
+            text-align: center;
+           
+      
+            
+            > h1{
+                  font-size: 1rem;
+                  letter-spacing: 3px;
+                  -webkit-text-stroke: 2px rgba(208, 172, 41, 0.8);  /* Garis tepi teks */
+      
+            }
+            > h3{
+                  font-size: 10px; 
+            }
+      
+            >.btn{
+                  padding: 0.8rem 1rem; /* Padding tombol */
+                  background:#EFB495;
+                  color: beige;
+                  border-radius: 10px;  /* Sudut membulat tombol */
+                  padding: 10px 20px; 
+                  font-size: 8px;
+                  transition: 0.3s;
+                  font-family: 'Lucida Sans',sans-serif;
+                  
+            }
+      
+      
+      }
+
+
+    /* Mengatur gaya untuk elemen induk */
+      .induk{
+            width: 100%;
+            min-height: 20vh; /* Tinggi minimum */
+            color: #fff;
+            position: relative;
+      
+      }
+      
+        /* Mengatur gaya untuk elemen wadah */
+      .wadah{
+            width: 100px;
+            height: 1px;
+            position: absolute;
+            top: 40%;
+            left: 35%;
+            transform: translate(-40%, -35%); /* Mengatur posisi */
+      }
+      
+       /* Mengatur gaya untuk jam digital */
+      .jam-digital{
+            /* width:20%; */
+            height: 80%;
+            background: rgba(13, 1, 20, 0.068); /* Latar belakang dengan transparansi */
+            border-radius:8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(60px); /* Efek blur latar belakang */
+      }
+      
+      
+      
+      .jam-digital span{
+            font-size: 35px;
+            width: 30px;
+            display: inline-block;  /* Tampilkan sebagai blok sebaris */
+            text-align: center;
+            position: relative;
+      
+      }
+      
+      .jam-digital span::after{
+            font-size: 7px;
+            position: absolute;
+            bottom: -5px;
+            left:40%;
+            transform: translateX(-40%); /* Mengatur posisi horizontal */
+      }
+
+
+    /* Mengatur gaya untuk elemen wrapper */
+      .wrapper{
+            display: flex;
+            width: 100%;
+            justify-content: space-around; /* Rata sebaris */
+            
+      }
+      
+      
+    /* Mengatur gaya untuk elemen card */
+
+      .card{
+            width:500px;
+            height:150px;
+            padding: 2rem 1rem;
+            position: relative;
+            display: flex;
+            box-shadow: 0px 7px 10px rgba(246, 241, 241, 0.5); /* Bayangan kotak */
+            transition:  0.7s ease-in-out; /* Transisi animasi */
+      }
+      
+      .card:before{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(147, 224, 215, 0.5), rgba(150m201,61,1));
+            z-index: 3; /* Posisi di atas elemen lain */
+            transition: 0.5s all;
+            opacity:0; /* Opasitas awal */
+      }
+      
+      .card:hover::before{
+            opacity: 1;  /* Opasitas saat di-hover */
+      
+      }
+      
+      .card img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+      }
+      
+      
+      
+      .card .info{
+            position: relative;
+            z-index: 3;
+            color: #eae7e7;
+            opacity: 0; /* Opasitas awal */
+            transform: translateY(30px);  /* Posisi vertikal awal */
+            transition: 0.5s all;
+      }
+      
+      .card:hover .info{
+            opacity: 3;
+            transform: translateY(0px); /* Posisi vertikal akhir */
+      }
+      
+      
+      .card .info p{
+            font-size: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+      }
+      
+      .card .info .btn{
+            text-decoration: none;
+            padding: 0.1rem 1rem;
+            background: #C08261;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+      }
+      
+      /* Mengatur gaya untuk footer */
+      footer{
+            width:100%;
+            background: #d7c7c1;
+            position: relative;
+            bottom: 0;
+            color: #040303;
+            padding: 5px 0 5px;  /* Padding atas dan bawah */
+            font-size: 10px;
+            line-height: 10px;
+            height: auto;
+            font-family: 'Bona Nova sc';
+          bottom: unset; /* Menghapus posisi bottom yang sudah diatur */
+      }
+      
+      /* Gaya untuk elemen dengan kelas .ar */
+      .ar{
+            width: 100%;
+            margin: 2px;
+            display: flex;
+            flex-wrap: wrap;  /* Membungkus elemen ke baris berikutnya jika perlu */
+            align-items: center;
+            justify-content: space-between; /* Menyebar elemen secara merata */
+            background: #F0997D;
+      }
+      
+     
+
+      /* Gaya untuk logo */
+      .logo{
+            width: 30px;
+            margin-bottom: 10px;
+      }
+      
+
+      /* Gaya untuk h3 dalam .cl */
+      .cl h3{
+            margin-bottom: 30px;
+            
+      }
+      
+
+      /* Gaya untuk gambar dalam .cl */
+      .cl img{
+            width: 15px;
+      }
+  
+
+      /* Gaya untuk gambar dalam #label1 */
+      #label1 img{
+            width: 40px;
+      
+      }
+       
+       /* Gaya untuk tautan dalam .cl */
+      .cl a{
+            text-decoration: none;
+            color:rgb(3, 3, 3) ;
+      }
+      
+
+      /* Gaya untuk item dalam daftar di .cl */
+      .cl ul li{
+            padding-left: 0;
+            text-decoration: none;
+            margin-bottom: 5px;
+            list-style: circle; /* Menampilkan bullet dengan lingkaran */
+      }
+      
+      /* Gaya untuk paragraf dalam .cl */
+      .cl p{
+            font-family: 'playwrite cuba' 'Trebuchet MS';
+            text-align: left;
+            font-size: 10px;
+            line-height: 5px;
+      }
+      
+      /* Gaya untuk h5 dalam #label1 */
+      #label1 h5{
+            text-align: justify;
+            font-family: 'playwrite cuba' 'Trebuchet MS';
+            font-size: 8px;
+            font-weight: 200; /* Berat font ringan */
+      
+      }
+  
+      /* Gaya untuk elemen dengan id #label2 */
+      #label2{
+            text-align: justify;
+            font-family: 'playwrite cuba' 'Trebuchet MS';
+            font-size: 8px;
+            font-weight: 200;
+            padding: 10px;
+
+            >.bio {
+                 
+                  font-size: 10px;
+
+
+            /* Gaya untuk gambar dalam .bio */
+                  >img{
+                        width: 10px;
+            
+                  }
+            }
+      }
+      
+
+      /* Gaya untuk elemen dengan kelas .ka */
+      .ka{
+            width: 100%;
+            height: 25%;
+            background-color: linear-gradient( to right,#2cc73b,#c35920 );
+            border-radius: 3px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            overflow: hidden; /* Menyembunyikan konten yang melampaui batas */
+
+      }
+      
+      /* Gaya untuk elemen span di dalam .ka */
+      .ka span{
+            width: 20px;
+            height: 100%;
+            background:linear-gradient(to right,#33ce33,#155f53);
+      
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            animation: moving 4s linear infinite;
+      }
+      
+      /* Gaya untuk elemen dengan kelas .copy */
+      .copy{
+            width: 100%;
+            text-align: center;
+            padding-left: 0px;
+      }
+
+
+
+      
+    /* Gaya untuk elemen sosial media dengan kelas .sosmed */
+.sosmed{
+      width: 90%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Gaya untuk item daftar dalam .sosmed */
+      >li{
+            padding: 5px;
+            font-size: 8px;
+            /* Gaya untuk tautan dalam .sosmed */
+            >a{
+                  padding: 5px;
+                  align-items: center;
+                  /* Gaya untuk paragraf dalam tautan sosial media */
+
+                  >p{
+                        align-items: center;
+                        justify-content: center;
+                  }
+            }
+      }
+}
+      
+      }
+
+
+      @media screen and (max-width:375px) and (min-width:320px) {
+
+            /* Mengatur gaya untuk header dan nav */
+          header,nav{
+          width: 100%;
+          height: 45px;
+          >ul {
+               
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+    
+                >li a{
+                      padding: 0px;
+                      font-size: 8px;
+                      
+                }
+               
+          }
+          
+    }
+    
+
+  /* Mengatur gaya untuk elemen .nav-1 dan .nav-2 */
+    .nav-1,
+    .nav-2{
+         
+          text-align: center;
+          align-items: center;
+    }
+    
+    /* Mengatur gaya khusus untuk .nav-1 */
+    .nav-1{
+          padding-top: 15px;  /* Padding atas */
+          flex: 6; /* Lebar fleksibel */
+          text-align: left;
+          margin-left: 40px; /* Margin kiri */
+    }
+    
+    /* Mengatur gaya untuk gambar dalam .nav-1 */
+    .nav-1 a{
+          > img{
+                margin-left: 0; /* Menghapus margin kiri */
+                margin-top: -10px;  /* Margin atas negatif */
+                width: 30px;
+          }
+    }
+
+    /* Mengatur gaya untuk elemen main */
+    main{
+          width: 100%;
+          height: 80vh; /* Tinggi relatif terhadap viewport */
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+    }
+    
+       /* Mengatur gaya untuk elemen caption */
+    .caption{
+          position: relative;
+          z-index: 90; /* Posisi di atas elemen lain */
+          color: azure;
+          text-align: center;
+         
+    
+          
+          > h1{
+                font-size: 1rem;
+                letter-spacing: 3px;
+                -webkit-text-stroke: 2px rgba(208, 172, 41, 0.8);  /* Garis tepi teks */
+    
+          }
+          > h3{
+                font-size: 10px; 
+          }
+    
+          >.btn{
+                padding: 0.8rem 1rem; /* Padding tombol */
+                background:#EFB495;
+                color: beige;
+                border-radius: 10px;  /* Sudut membulat tombol */
+                padding: 10px 20px; 
+                font-size: 8px;
+                transition: 0.3s;
+                font-family: 'Lucida Sans',sans-serif;
+                
+          }
+    
+    
+    }
+
+
+  /* Mengatur gaya untuk elemen induk */
+    .induk{
+          width: 100%;
+          min-height: 20vh; /* Tinggi minimum */
+          color: #fff;
+          position: relative;
+    
+    }
+    
+      /* Mengatur gaya untuk elemen wadah */
+    .wadah{
+          width: 400px;
+          height: 1px;
+          position: absolute;
+          top: 40%;
+          left: 35%;
+          transform: translate(-38%, -35%); /* Mengatur posisi */
+    }
+    
+     /* Mengatur gaya untuk jam digital */
+    .jam-digital{
+          width:100%;
+          height: 80%;
+          background: rgba(13, 1, 20, 0.068); /* Latar belakang dengan transparansi */
+          border-radius:8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          backdrop-filter: blur(60px); /* Efek blur latar belakang */
+    }
+    
+    
+    
+    .jam-digital span{
+          font-size: 35px;
+          width: 45px;
+          display: inline-block;  /* Tampilkan sebagai blok sebaris */
+          text-align: center;
+          position: relative;
+    
+    }
+    
+    .jam-digital span::after{
+          font-size: 7px;
+          position: absolute;
+          bottom: -5px;
+          left:40%;
+          transform: translateX(-40%); /* Mengatur posisi horizontal */
+    }
+
+
+  /* Mengatur gaya untuk elemen wrapper */
+    .wrapper{
+          display: flex;
+          width: 100%;
+          justify-content: space-around; /* Rata sebaris */
+          
+    }
+    
+    
+  /* Mengatur gaya untuk elemen card */
+
+    .card{
+          width:500px;
+          height:150px;
+          padding: 2rem 1rem;
+          position: relative;
+          display: flex;
+          box-shadow: 0px 7px 10px rgba(246, 241, 241, 0.5); /* Bayangan kotak */
+          transition:  0.7s ease-in-out; /* Transisi animasi */
+    }
+    
+    .card:before{
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom, rgba(147, 224, 215, 0.5), rgba(150m201,61,1));
+          z-index: 3; /* Posisi di atas elemen lain */
+          transition: 0.5s all;
+          opacity:0; /* Opasitas awal */
+    }
+    
+    .card:hover::before{
+          opacity: 1;  /* Opasitas saat di-hover */
+    
+    }
+    
+    .card img{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+    }
+    
+    
+    
+    .card .info{
+          position: relative;
+          z-index: 3;
+          color: #eae7e7;
+          opacity: 0; /* Opasitas awal */
+          transform: translateY(30px);  /* Posisi vertikal awal */
+          transition: 0.5s all;
+    }
+    
+    .card:hover .info{
+          opacity: 3;
+          transform: translateY(0px); /* Posisi vertikal akhir */
+    }
+    
+    
+    .card .info p{
+          font-size: 10px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+    }
+    
+    .card .info .btn{
+          text-decoration: none;
+          padding: 0.1rem 1rem;
+          background: #C08261;
+          font-size: 10px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.4s ease-in-out;
+    }
+    
+    /* Mengatur gaya untuk footer */
+    footer{
+          width:100%;
+          background: #d7c7c1;
+          position: relative;
+          bottom: 0;
+          color: #040303;
+          padding: 5px 0 5px;  /* Padding atas dan bawah */
+          font-size: 10px;
+          line-height: 10px;
+          height: auto;
+          font-family: 'Bona Nova sc';
+        bottom: unset; /* Menghapus posisi bottom yang sudah diatur */
+    }
+    
+    /* Gaya untuk elemen dengan kelas .ar */
+    .ar{
+          width: 100%;
+          margin: 2px;
+          display: flex;
+          flex-wrap: wrap;  /* Membungkus elemen ke baris berikutnya jika perlu */
+          align-items: center;
+          justify-content: space-between; /* Menyebar elemen secara merata */
+          background: #F0997D;
+    }
+    
+   
+
+    /* Gaya untuk logo */
+    .logo{
+          width: 30px;
+          margin-bottom: 10px;
+    }
+    
+
+    /* Gaya untuk h3 dalam .cl */
+    .cl h3{
+          margin-bottom: 30px;
+          
+    }
+    
+
+    /* Gaya untuk gambar dalam .cl */
+    .cl img{
+          width: 15px;
+    }
+
+
+    /* Gaya untuk gambar dalam #label1 */
+    #label1 img{
+          width: 40px;
+    
+    }
+     
+     /* Gaya untuk tautan dalam .cl */
+    .cl a{
+          text-decoration: none;
+          color:rgb(3, 3, 3) ;
+    }
+    
+
+    /* Gaya untuk item dalam daftar di .cl */
+    .cl ul li{
+          padding-left: 0;
+          text-decoration: none;
+          margin-bottom: 5px;
+          list-style: circle; /* Menampilkan bullet dengan lingkaran */
+    }
+    
+    /* Gaya untuk paragraf dalam .cl */
+    .cl p{
+          font-family: 'playwrite cuba' 'Trebuchet MS';
+          text-align: left;
+          font-size: 10px;
+          line-height: 5px;
+    }
+    
+    /* Gaya untuk h5 dalam #label1 */
+    #label1 h5{
+          text-align: justify;
+          font-family: 'playwrite cuba' 'Trebuchet MS';
+          font-size: 8px;
+          font-weight: 200; /* Berat font ringan */
+    
+    }
+
+    /* Gaya untuk elemen dengan id #label2 */
+    #label2{
+          text-align: justify;
+          font-family: 'playwrite cuba' 'Trebuchet MS';
+          font-size: 8px;
+          font-weight: 200;
+          padding: 10px;
+
+          >.bio {
+               
+                font-size: 10px;
+
+
+          /* Gaya untuk gambar dalam .bio */
+                >img{
+                      width: 10px;
+          
+                }
+          }
+    }
+    
+
+    /* Gaya untuk elemen dengan kelas .ka */
+    .ka{
+          width: 100%;
+          height: 25%;
+          background-color: linear-gradient( to right,#2cc73b,#c35920 );
+          border-radius: 3px;
+          position: absolute;
+          top: 25px;
+          left: 0;
+          overflow: hidden; /* Menyembunyikan konten yang melampaui batas */
+
+    }
+    
+    /* Gaya untuk elemen span di dalam .ka */
+    .ka span{
+          width: 20px;
+          height: 100%;
+          background:linear-gradient(to right,#33ce33,#155f53);
+    
+          border-radius: 3px;
+          position: absolute;
+          top: 0;
+          left: 10px;
+          animation: moving 4s linear infinite;
+    }
+    
+    /* Gaya untuk elemen dengan kelas .copy */
+    .copy{
+          width: 100%;
+          text-align: center;
+          padding-left: 0px;
+    }
+
+
+
+    
+  /* Gaya untuk elemen sosial media dengan kelas .sosmed */
+.sosmed{
+    width: 90%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Gaya untuk item daftar dalam .sosmed */
+    >li{
+          padding: 5px;
+          font-size: 8px;
+          /* Gaya untuk tautan dalam .sosmed */
+          >a{
+                padding: 5px;
+                align-items: center;
+                /* Gaya untuk paragraf dalam tautan sosial media */
+
+                >p{
+                      align-items: center;
+                      justify-content: center;
+                }
+          }
+    }
+}
+    
+    }

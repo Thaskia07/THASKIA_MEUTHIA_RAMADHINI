@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- Meta charset untuk encoding karakter -->
+      <meta charset="UTF-8">
+      <!-- Meta viewport untuk penyesuaian tampilan di perangkat mobile -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Judul halaman -->
+      <title>login</title>
+      <!-- Link ke stylesheet CSS untuk halaman login -->
+      <link rel="stylesheet" href="login.css">
+</head>
+<body>
+      <!-- Bagian header dengan navigasi -->
+      <header>
+            <nav>
+                  <ul>
+                        <!-- Menu navigasi dengan link ke berbagai halaman -->
+                        <li class="nav-1"><a href="index.html"><img src="./assets/Mosque (1).png" alt="gambar"></a></li>
+                        <li class="nav-2"><a href="index.html">HOME</a></li>
+                        <li class="nav-2"><a href="surah.html">SURAH</a></li>
+                        <li class="nav-2"><a href="doa.html">DOA</a></li>
+                        <!-- Ada kesalahan penamaan file 'about.tml' seharusnya 'about.html' -->
+                        <li class="nav-2"><a href="about.html">ABOUT</a></li>
+                        <li class="nav-2"><a href="login.html" class="data">LOGIN</a></li>
+                  </ul>
+            </nav>
+      </header>
+      
+      <!-- Bagian utama konten -->
+      <main>
+            <!-- Video latar belakang -->
+            <video id="background-video" autoplay muted loop>
+                  <source src="./bg video 1.mp4" type="video/mp4">
+            </video>
+      </main>
+
+      <!-- Kotak login -->
+      <div class="login-box">
+            <!-- Gambar logo atau ilustrasi -->
+            <img src="./assets/al-quran.jpg" class="al-quran" alt="Al-Quran">
+            <h1>Login Here</h1>
+            <form id="loginForm">
+                  <!-- Input untuk email -->
+                  <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                  <!-- Label untuk password -->
+                  <p>Password</p>
+                  <!-- Input untuk password -->
+                  <input type="password" name="Password" id="password" placeholder="Enter Password">
+                  <!-- Tombol submit untuk login -->
+                  <input type="submit" name="submit" value="Login">
+                  <!-- Link untuk lupa password -->
+                  <a href="#">Forget Password</a>
+            </form>
+      </div>
+
+      <!-- Bagian footer -->
+      <footer>
+            <div class="ar">
+                  <!-- Bagian About -->
+                  <div class="cl" id="label1">
+                        <img src="./assets/Mosque (1).png" class="logo">
+                        <h3>About</h3>
+                        <h5>MOSQUE Al-Quran merupakan media atau platform yang dibuat untuk mempermudah
+                              kaum muslimin untuk membaca al-quran dimana saja dan kapan saja. Raihlah kesuksen dunia
+                              maupun akhirat bersama-sama. Thank you partisipasinya!</h5>
+                  </div>
+                  <!-- Bagian Contact Us -->
+                  <div class="cl" id="label2">
+                        <h3>Contact us <div class="ka"><span></span></div></h3>
+                        <p class="bio"><img src="./assets/email.jpg" alt="">thaskia67@gmail.com</p>
+                        <p class="bio"><img src="./assets/wa.png" alt="">+62 8196 6494</p>
+                        <p class="bio"><img src="./assets/map.jpg" alt="">Jl.Diponegoro,8a.</p>
+                  </div>
+                  <!-- Bagian Fiture -->
+                  <div class="cl">
+                        <h3>Fiture <div class="ka"><span></span></div></h3>
+                        <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="surah.html">Surah</a></li>
+                              <li><a href="doa.html">Doa</a></li>
+\                              <li><a href="about.html">About</a></li>
+                              <li><a href="login.html">Login</a></li>
+                        </ul>
+                  </div>
+                  <!-- Bagian Social Media -->
+                  <ul class="sosmed">
+                        <li><a href="https://www.instagram.com/?h1=en"><img src="./assets/instagram.jpg" alt=""></a><p>Mosque Al-Qur'an</p></li>
+                        <li><a href="https://www.lineapp.com/?h1=en"><img src="./assets/line.png" alt=""></a><p>MosqueDigital07</p></li>
+                        <li><a href="https://twitter.com/i/flow/login"><img src="./assets/twitter.jpg" alt=""></a><p>@MosqueAl-Qur'an</p></li>
+                  </ul>
+            </div>
+            <hr>
+            <!-- Copyright notice -->
+            <p class="copy">&copy;Thaskia Meuthia Ramadhini</p>
+      </footer>
+
+      <!-- Link ke file JavaScript untuk halaman login -->
+      <script src="login.js"></script>
+</body>
+</html>
